@@ -35,8 +35,8 @@ header {
       padding: 1em;
 
       @include breakPoints(mobile) {
-        width: 3em;
-
+        width: 5em;
+        padding: 0.5em;
       }
     }
 
