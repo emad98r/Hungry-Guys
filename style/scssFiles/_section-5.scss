@@ -1,0 +1,215 @@
+.section-5 {
+  width: 100%;
+  background-image: url("../../imgs/section-5.jpg");
+  height: 80vh;
+  background-position: center center;
+  background-size: cover;
+
+  @include breakPoints(mobile) {
+    height: 100%;
+  }
+
+  .container {
+    width: 100%;
+    height: 80vh;
+    background-color: #0003;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    @include breakPoints(mobile) {
+      height: 100%;
+    }
+
+    .info {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.5em;
+
+      h3 {
+        font-size: 2.5em;
+        font-family: var(--main-font);
+        color: var(--background-color);
+        margin-bottom: 0.5em;
+      }
+
+      p {
+        width: 70%;
+        text-align: center;
+        font-family: var(--sub-font);
+        font-size: 1em;
+        line-height: 1.5;
+        color: var(--background-color);
+
+        @include breakPoints(mobile) {
+          font-size: 0.8em;
+          width: 90%;
+        }
+      }
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+      justify-content: stretch;
+
+      @include breakPoints(mobile) {
+        width: 80%;
+      }
+
+      @include breakPoints(small) {
+        width: 90%;
+      }
+
+      @include breakPoints(medium) {
+        width: 80%;
+      }
+
+      section:first-of-type {
+        display: flex;
+        margin-bottom: 1em;
+
+        @include breakPoints(mobile) {
+          flex-direction: column;
+        }
+
+        input {
+          background-color: white;
+          color: var(--main-color);
+          border: none;
+          outline: none;
+          font-family: var(--sub-font);
+          padding: 1.3em 1em;
+          width: 35em;
+          margin-right: 1em;
+          border-radius: 10px;
+          font-size: 1em;
+
+          @include breakPoints(mobile) {
+            width: 100%;
+            margin: 0 0 0.5em;
+            padding: 0.9em 1em;
+            font-size: 0.8em;
+          }
+
+        }
+      }
+
+      section:nth-of-type(2),
+      section:nth-of-type(3) {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 1em;
+
+        @include breakPoints(mobile) {
+          flex-direction: column;
+        }
+
+        div {
+          position: relative;
+          width: 109%;
+          margin-right: 1em;
+
+          @include breakPoints(mobile) {
+            width: 100%;
+            margin: 0 0 0.5em;
+          }
+
+          input {
+            width: 100%;
+            margin: 0;
+            font-size: 1em;
+
+            @include breakPoints(mobile) {
+              width: 100%;
+              padding: 0.9em 1em;
+              font-size: 0.8em;
+            }
+          }
+
+          img {
+            width: 1.2em;
+            position: absolute;
+            top: 1.1em;
+            right: 1em;
+
+            @include breakPoints(mobile) {
+              top: 0.8em;
+            }
+          }
+        }
+
+        input {
+          background-color: white;
+          color: var(--main-color);
+          border: none;
+          outline: none;
+          font-family: var(--sub-font);
+          padding: 1.3em 1em;
+          margin: 0 1em;
+          width: 100%;
+          border-radius: 10px;
+          font-size: 1em;
+
+          @include breakPoints(mobile) {
+            width: 100%;
+            margin: 0 0 0.5em;
+            padding: 0.9em 1em;
+            font-size: 0.8em;
+
+          }
+        }
+
+        select {
+          width: 100%;
+          border-radius: 10px;
+          background-color: white;
+          color: var(--main-color);
+          border: none;
+          outline: none;
+          font-family: var(--sub-font);
+          padding: 1.3em 1em;
+          margin-right: 1em;
+          font-size: 1em;
+
+          @include breakPoints(mobile) {
+            width: 100%;
+            margin: 0 0 0.5em;
+            padding: 0.9em 1em;
+            font-size: 0.8em;
+          }
+        }
+
+        button {
+          width: 100%;
+          border-radius: 10px;
+          border: none;
+          outline: none;
+          font-family: var(--sub-font);
+          padding: 1.3em 1em;
+          margin-right: 1em;
+          font-size: 1em;
+          background-color: var(--main-color);
+          color: var(--background-color);
+
+          @include breakPoints(mobile) {
+            width: 100%;
+            margin: 0 0 0.5em;
+          }
+
+          &:hover {
+            background-color: var(--background-color);
+            color: var(--main-color);
+            transition: all .5s ease-out;
+          }
+        }
+      }
+    }
+
+  }
+}

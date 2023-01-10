@@ -1,0 +1,62 @@
+.first-section {
+  width: 100%;
+  padding: 3em 0;
+
+  .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 2.5em;
+
+    @include breakPoints(mobile) {
+      flex-direction: column;
+    }
+
+    .info {
+      width: 50%;
+
+      @include breakPoints(mobile) {
+        width: 100%;
+      }
+
+      section {
+        margin-bottom: 1.5em;
+
+        h4 {
+          font-size: 1.5em;
+          font-family: var(--main-font);
+          margin-bottom: 0.5em;
+          font-weight: 600;
+
+          @include breakPoints(mobile) {
+            text-align: center;
+
+          }
+        }
+
+        p {
+          font-size: 1em;
+          font-family: var(--sub-font);
+          color: var(--gray-color);
+
+          @include breakPoints(mobile) {
+            font-size: 0.9em;
+            text-align: center;
+          }
+
+        }
+      }
+    }
+
+    img {
+      width: 50%;
+      border-radius: 15px;
+      box-shadow: 8px 11px 34px -7px rgba(186, 186, 186, 1);
+
+      @include breakPoints(mobile) {
+        width: 100%;
+      }
+    }
+  }
+}

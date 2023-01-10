@@ -1,0 +1,63 @@
+.section-3 {
+  width: 100%;
+  height: 70vh;
+  background-image: url("../../imgs/section-3\ img.jpg");
+  background-size: cover;
+  background-position: center;
+
+  @include breakPoints(mobile) {
+    height: 50vh;
+  }
+
+  @include breakPoints(small) {
+    height: 50vh;
+  }
+
+  .container {
+    width: 100%;
+    background-color: #0000008a;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    h2 {
+      font-size: 5em;
+      color: var(--background-color);
+      width: 50%;
+      text-align: center;
+      margin-bottom: 0.3em;
+      font-family: var(--main-font);
+      text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.573);
+
+      @include breakPoints(mobile) {
+        font-size: 3em;
+        width: 80%;
+      }
+
+      @include breakPoints(small) {
+        font-size: 3em;
+        width: 80%;
+      }
+    }
+
+    p {
+      font-size: 1.2em;
+      font-family: var(--sub-font);
+      color: var(--background-color);
+      width: 50%;
+      text-align: center;
+
+      @include breakPoints(mobile) {
+        font-size: 1em;
+        width: 80%;
+      }
+
+      @include breakPoints(small) {
+        font-size: 1em;
+        width: 60%;
+      }
+    }
+  }
+}

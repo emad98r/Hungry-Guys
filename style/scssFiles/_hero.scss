@@ -1,0 +1,70 @@
+.hero {
+  width: 100%;
+  background-image: url("../../imgs/backgound-img.jpg");
+  height: 100vh;
+  background-position: center bottom;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--background-color);
+    background-color: #0000008f;
+    height: 100vh;
+
+    h1 {
+      font-size: 5em;
+      width: 50%;
+      text-align: center;
+      font-family: var(--main-font);
+      margin-bottom: 0.5em;
+
+      @include breakPoints(mobile) {
+        font-size: 2.5em;
+        width: 80%;
+      }
+
+      @include breakPoints(small) {
+        font-size: 3.5em;
+        width: 80%;
+      }
+
+      @include breakPoints(medium) {
+        font-size: 3.5em;
+        width: 80%;
+      }
+    }
+
+    p {
+      font-family: var(--sub-font);
+      width: 50%;
+      text-align: center;
+      margin-bottom: 1.5em;
+
+      @include breakPoints(mobile) {
+        width: 80%;
+      }
+    }
+
+    button {
+      width: 10em;
+      background-color: var(--main-color);
+      padding: 0.5em;
+      color: var(--background-color);
+      text-transform: capitalize;
+      font-family: var(--main-font);
+      font-size: 1.2em;
+
+      &:hover {
+        background-color: #ffffff46;
+        outline: 1px solid var(--main-color);
+      }
+    }
+  }
+}

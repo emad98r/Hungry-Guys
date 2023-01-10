@@ -1,0 +1,222 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--background-color);
+}
+
+ul {
+  li {
+    list-style: none;
+  }
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+
+  @include breakPoints(mobile) {
+    width: 100%;
+    padding: .5em;
+  }
+}
+
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.to-top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  position: fixed;
+  bottom: 1em;
+  right: 2em;
+  z-index: 3;
+  background-color: var(--main-color);
+  cursor: pointer;
+
+  &:hover {
+    background-color: var(--dark-color);
+  }
+
+  img {
+    width: 2em;
+    margin: 0.5em;
+
+    @include breakPoints(mobile) {
+      width: 1.5em;
+    }
+  }
+}
+
+
+//? menu list ----------------------
+.menu-list {
+  padding: 10em 0 3em;
+  display: none;
+  z-index: 2;
+
+  .container {
+    position: relative;
+    padding-top: 5em;
+
+    button {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: var(--main-color);
+      color: var(--background-color);
+      width: 5em;
+      font-family: var(--main-font);
+      padding: 0.5em 1em;
+      border-radius: 10px;
+      font-size: 1.2em;
+      opacity: 0.5;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+
+    .info {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1em;
+
+      h2 {
+        font-size: 3em;
+        font-family: var(--main-font);
+        color: var(--main-color);
+        margin-bottom: 0.5em;
+
+        @include breakPoints(mobile) {
+          font-size: 2em;
+        }
+      }
+
+      p {
+        font-size: 1em;
+        font-family: var(--sub-font);
+        color: var(--gray-color);
+        width: 70%;
+        text-align: center;
+
+        @include breakPoints(mobile) {
+          font-size: 0.9em;
+          width: 90%;
+        }
+      }
+    }
+
+    .menu-items {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+
+      section {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        margin-bottom: 2.5em;
+
+        h3 {
+          font-size: 1.9em;
+          color: var(--dark-color);
+          margin-bottom: 0.5em;
+          font-family: var(--sub-font);
+        }
+
+        .items {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          gap: 2em;
+
+          @include breakPoints(mobile) {
+            flex-direction: column;
+          }
+
+          .item {
+            width: calc(50% - 2em);
+            border-bottom: 1px solid #b8b8b84c;
+            padding-bottom: 1em;
+
+            @include breakPoints(mobile) {
+              width: 90%;
+            }
+
+            .name-price {
+              display: flex;
+              flex-direction: row;
+              justify-content: space-between;
+              align-items: center;
+
+              h4 {
+                font-family: var(--main-font);
+                font-weight: 800;
+                color: var(--main-color);
+                margin-bottom: 0.3em;
+                font-size: 1.2em;
+              }
+
+              i {
+                color: red;
+                font-size: 1.3em;
+              }
+            }
+
+            p {
+              color: var(--gray-color);
+              font-family: var(--sub-font);
+              width: 80%;
+            }
+          }
+        }
+      }
+    }
+
+    .most-ordered {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(15em, 1fr));
+      gap: 2em;
+
+      .card {
+        img {
+          width: 100%;
+          object-fit: cover;
+          border-radius: 15px;
+          margin-bottom: 1em;
+        }
+
+        h3 {
+          font-family: var(--main-font);
+          font-weight: 800;
+          color: var(--main-color);
+          margin-bottom: 0.3em;
+          font-size: 1.2em;
+        }
+
+        p {
+          color: var(--gray-color);
+          font-family: var(--sub-font);
+          width: 80%;
+        }
+      }
+    }
+  }
+}
+
+// ? hide and show the menu list -------
+.hide {
+  display: none;
+}
